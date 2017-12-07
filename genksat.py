@@ -91,8 +91,8 @@ def main(argv=None):
         generate_ksat(k, nbvar, nbclauses, issat)
 
     except err:
-        print >> sys.stderr, sys.argv[0].split("/")[-1] + ": " + str(err.msg)
-        print >> sys.stderr, "\t for help use --help"
+        print(sys.argv[0].split("/")[-1] + ": " + str(err.msg), file=sys.stderr)
+        print("\t for help use --help" , file=sys.stderr)
         return 2
 
     return 0
